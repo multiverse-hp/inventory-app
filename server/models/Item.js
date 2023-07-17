@@ -4,11 +4,11 @@ const {sequelize} = require('../db')
 
 
 const Item = sequelize.define("item", {
-    name: Sequelize.STRING,
+    title: Sequelize.STRING,
     description: Sequelize.STRING,
     price: Sequelize.FLOAT,
     category: Sequelize.STRING,
-    image_url: Sequelize.TEXT,
+    image: Sequelize.TEXT,
   });
   module.exports = {
     db: sequelize,
