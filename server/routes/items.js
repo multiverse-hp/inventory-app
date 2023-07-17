@@ -62,14 +62,14 @@ router.delete("/:itemId", async (req, res, next) => {
 router.put('/:id', async (req,res, next)=> {
   let id = req.params.id
   let item = await Item.findByPk(id)
-  const {name, description, price, category, image_url} = req.body
+  const {title, description, price, category, image} = req.body
   try{
    if(item){
-    item.name = name
+    item.title = title
     item.description = description
     item.price = price
     item.category = category
-    item.image_url = image_url
+    item.image = image
     await item.save()
     res.json(item)
    }
