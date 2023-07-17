@@ -7,11 +7,11 @@ const Sauce = sequelize.define("sauces", {
 });
 
 const Item = sequelize.define("items", {
-  name: Sequelize.STRING,
+  title: Sequelize.STRING,
   description: Sequelize.STRING,
   price: Sequelize.FLOAT,
   category: Sequelize.STRING,
-  image_url: Sequelize.TEXT,
+  image: Sequelize.TEXT,
 });
 
 module.exports = {
