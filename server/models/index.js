@@ -11,7 +11,7 @@ const Item = sequelize.define("items", {
   description: Sequelize.STRING,
   price: Sequelize.FLOAT,
   category: Sequelize.STRING,
-  image: Sequelize.TEXT,
+  image: Sequelize.STRING,
 });
 
 module.exports = {
