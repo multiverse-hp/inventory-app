@@ -14,22 +14,28 @@ router.get("/", async (req, res, next) => {
 
 
 //GET /items/ :itemId
-router.get("/:id", async (req, res, next) =>{
-    try{
-        console.log('item id', req.params.id )
-        let item  = await Item.findByPk(req.params.id)
-        //     include:[{ model: Item }]
-        // });
+router.get("/:id", async (req, res, next) => {
+  try {
+    let itemId = req.params.id;
+    console.log('item id', itemId);
+    
+    if (!isNaN(+itemId)) {
+      // Find item by Id
+      const foundItem = await Item.findByPk(itemId, {
+        attributes: { exclude: ['createdAt', 'updatedAt'] }
+      });
 
-        if(!item){
-            res.sendStatus(404).send('Item not found');
-            next();
-        } else{
-            res.send(item);
-        }
-    }catch(error){
-        next(error)
+      if (!foundItem) {
+        return res.status(404).json({ message: "Item not found" });
+      }
+      return res.status(200).json({ message: "Successfully retrieved item", data: foundItem });
+    } else {
+      throw new Error(`Invalid ID ${itemId} passed`);
     }
+  } catch (err) {
+    err.statusCode = 400;
+    return next(err);
+  }
 });
 
 // DELETE /items
