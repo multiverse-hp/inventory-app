@@ -3,3 +3,47 @@
   box-sizing: border-box;
   background-color: rgb(223, 223, 223);
 }
+
+/* #root {
+  display: flex;
+} */
+
+/* main {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows: repeat(3, 1fr);
+} */
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+/* .item1-div {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows: repeat(3, 1fr);
+} */
+/* .item1-div img{
+  height: 300px;
+  width: 300px;
+} */
+.item-image {
+  height: 200px;
+  width: 300px;
+}
+
+.descript-div {
+  height: 200px;
+  width: 300px;
+}
+/* 
+.descript-div img {
+  height: 200px;
+  width: 300px;
+} */
+
+.descript-div h3 {
+  font-size: 15px;
+}

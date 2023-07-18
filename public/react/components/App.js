@@ -51,12 +51,17 @@ export const App = () => {
       {/* <h1>Sauce Store</h1>
 			<h2>All things 🔥</h2>
 			<SaucesList sauces={sauces} /> */}
-
+			<div>
 			<h1>Inventory</h1>
 			<h2>All items</h2>
 			{/* button to add item */}
 			<button>Add Item</button>
+			<div className='testing'>
 			<ItemsList items={items} />
+			</div>
+			</div>
+
+			
 		</main>
 	)
 }
