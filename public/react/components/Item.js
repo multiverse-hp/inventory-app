@@ -1,14 +1,15 @@
-import React from 'react';
+import React, { useState,useEffect } from 'react';
 import apiURL from '../api';
 
 export const Item = (props) => {
 
-  // async function getItem(){
-  //   let itemData = await fetch(`${apiURL}/items/${props.item.id}`)
-  //   let item = await itemData.json()
-  //   props.setItems(item)
-  // }
+   function getItem(){
+    // let itemData = await fetch(`${apiURL}/items/${props.item.id}`)
+    // let item = await itemData.json()
+    // props.setClickItems(item);
+    props.setClickItems(props.item);
 
+  }
   return( 
   <div className = 'item'>
     <h3>{props.item.title}</h3>
