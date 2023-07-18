@@ -18,11 +18,11 @@ import { Item } from './Item';
 export const ItemsList = ({ items, setClickItems }) => {
   return (
     <div className="main-container">
-      <h1>Inventory</h1>
-      <h2>All items</h2>
+      {/* <h1>Inventory</h1> */}
+      {/* <h2>All items</h2> */}
       <div className="grid-container">
         {items.map((item, idx) => (
-          <Item item={item} key={idx} />
+          <Item item={item} setClickItems={setClickItems} key={idx} />
         ))}
       </div>
     </div>

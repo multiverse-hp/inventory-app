@@ -11,12 +11,12 @@ export const Item = (props) => {
     // let item = await itemData.json()
     // props.setClickItems(item);
     props.setClickItems(props.item);
-
+    console.log(props.item);
   }
 
   return( 
     <>
-    <img 
+    <img className='item-images'
     onClick={getItem} 
     src={props.item.image} alt={props.item.name} />
      <div className='descript-div'>
