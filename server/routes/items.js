@@ -12,7 +12,6 @@ router.get("/", async (req, res, next) => {
   }
 });
 
-
 //GET /items/ :itemId
 router.get("/:id", async (req, res, next) => {
   try {
@@ -51,7 +50,7 @@ router.delete("/", async (req, res, next) => {
 // DELETE /items/:itemID
 router.delete("/:itemId", async (req, res, next) => {
   try {
-    const itemID = req.params.itemID;
+    const itemId = req.params.itemId;
     const item = await Item.findByPk(itemId);
     if (!item) {
       res.status(400).send("Item not found");
@@ -77,10 +76,31 @@ router.put('/:id', async (req,res, next)=> {
     item.category = category
     item.image = image
     await item.save()
-    res.json(item)
+    res.send(item)
    }
   }catch (error) {
     next(error)
   }
 })
+
+//add item
+router.post('/item', async (req, res, next) => {
+  try {
+    const { name, description, price, category, image_url } = req.body;
+
+    const newItem = await Item.create({
+      name,
+      description,
+      price,
+      category,
+      image_url
+    });
+
+    res.status(201).json(newItem);
+  } catch (error) {
+    console.error('Error adding item:', error);
+    res.status(500).json({ error: 'Failed to add item' });
+  }
+});
+
 module.exports = router;
