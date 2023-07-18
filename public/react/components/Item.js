@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState,useEffect } from 'react';
 import apiURL from '../api';
 
@@ -29,15 +28,3 @@ console.log(props.item);
 }
 
 module.exports = { Item }
-=======
-import React from 'react';
-
-export const Item = (props) => {
-
-  return <>
-    <h3>{props.item.name}</h3>
-    <img src={props.item.image} alt={props.item.name} />
-  </>
-} 
-	
->>>>>>> 88292c06b693173254fa9e8828d9976455f9cf08
