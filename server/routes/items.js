@@ -12,24 +12,29 @@ router.get("/", async (req, res, next) => {
   }
 });
 
-
 //GET /items/ :itemId
-router.get("/:id", async (req, res, next) =>{
-    try{
-        console.log('item id', req.params.id )
-        let item  = await Item.findByPk(req.params.id)
-        //     include:[{ model: Item }]
-        // });
+router.get("/:id", async (req, res, next) => {
+  try {
+    let itemId = req.params.id;
+    console.log('item id', itemId);
+    
+    if (!isNaN(+itemId)) {
+      // Find item by Id
+      const foundItem = await Item.findByPk(itemId, {
+        attributes: { exclude: ['createdAt', 'updatedAt'] }
+      });
 
-        if(!item){
-            res.sendStatus(404).send('Item not found');
-            next();
-        } else{
-            res.send(item);
-        }
-    }catch(error){
-        next(error)
+      if (!foundItem) {
+        return res.status(404).json({ message: "Item not found" });
+      }
+      return res.status(200).json({ message: "Successfully retrieved item", data: foundItem });
+    } else {
+      throw new Error(`Invalid ID ${itemId} passed`);
     }
+  } catch (err) {
+    err.statusCode = 400;
+    return next(err);
+  }
 });
 
 // DELETE /items
@@ -45,7 +50,7 @@ router.delete("/", async (req, res, next) => {
 // DELETE /items/:itemID
 router.delete("/:itemId", async (req, res, next) => {
   try {
-    const itemID = req.params.itemID;
+    const itemId = req.params.itemId;
     const item = await Item.findByPk(itemId);
     if (!item) {
       res.status(400).send("Item not found");
@@ -71,10 +76,31 @@ router.put('/:id', async (req,res, next)=> {
     item.category = category
     item.image = image
     await item.save()
-    res.json(item)
+    res.send(item)
    }
   }catch (error) {
     next(error)
   }
 })
+
+//add item
+router.post('/item', async (req, res, next) => {
+  try {
+    const { name, description, price, category, image_url } = req.body;
+
+    const newItem = await Item.create({
+      name,
+      description,
+      price,
+      category,
+      image_url
+    });
+
+    res.status(201).json(newItem);
+  } catch (error) {
+    console.error('Error adding item:', error);
+    res.status(500).json({ error: 'Failed to add item' });
+  }
+});
+
 module.exports = router;
