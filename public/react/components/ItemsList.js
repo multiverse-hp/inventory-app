@@ -15,7 +15,7 @@
 import React from 'react';
 import { Item } from './Item';
 
-export const ItemsList = ({ items }) => {
+export const ItemsList = ({ items, setClickItems }) => {
   return (
     <div className="main-container">
       <h1>Inventory</h1>
@@ -30,3 +30,16 @@ export const ItemsList = ({ items }) => {
 };
 
 module.exports = { ItemsList };
+
+// export const ItemsList = ({items, setClickItems}) => {
+
+// 	return <>
+// 		{
+// 			items.map((item, idx) => {
+// 				return <Item item={item} key={idx} setClickItems={setClickItems} />
+// 			})
+// 		}
+// 	</>
+// } 
+
+// module.exports = { ItemsList }
