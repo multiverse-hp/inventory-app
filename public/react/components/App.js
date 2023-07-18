@@ -8,28 +8,27 @@ import apiURL from '../api';
 
 export const App = () => {
 
-	const [sauces, setSauces] = useState([]);
+	// const [sauces, setSauces] = useState([]);
 	//intialized items state
 	const [items, setItems] = useState([])
     const [clickItems, setClickItems] = useState(null);
 
 //function for handling click on item card in home page
-	async function fetchSauces(){
-		try {
-			const response = await fetch(`${apiURL}/sauces`);
-			const saucesData = await response.json();
+	// async function fetchSauces(){
+	// 	try {
+	// 		const response = await fetch(`${apiURL}/sauces`);
+	// 		const saucesData = await response.json();
 			
-			console.log(saucesData);
-			setSauces(saucesData)
-		} catch (err) {
-			console.log("Oh no an error! ", err)
-		}
-	}
+	// 		console.log(saucesData);
+	// 		setSauces(saucesData)
+	// 	} catch (err) {
+	// 		console.log("Oh no an error! ", err)
+	// 	}
+	// }
 
 	//fetch items function
 	async function fetchItems(){
 		try {
-			//might need to change fetch link !!
 			const response = await fetch(`${apiURL}/items`);
 			const itemsData = await response.json();
 			
@@ -56,13 +55,14 @@ export const App = () => {
 			<SaucesList sauces={sauces} /> */}
 
 			
-			{clickItems !== null ? <ItemDetails /> : <div>
+			{clickItems !== null ? <ItemDetails item={clickItems} setClickItems={setClickItems} setItems={setItems} items={items}/> : 
+			<div>
 			<h1>Inventory</h1>
 			<h2>All items</h2>
+
 			{/* button to add item */}
 			<button>Add Item</button>
 			<ItemsList item={clickItems} setClickItems={setClickItems} setItems={setItems} items={items}/>
-			{/* <Item item={itemData} setClickItems = {setClick}/> */}
 			</div> }
 			
 		</main>

@@ -7,21 +7,17 @@ export const Item = (props) => {
     // let itemData = await fetch(`${apiURL}/items/${props.item.id}`)
     // let item = await itemData.json()
     // props.setClickItems(item);
-props.setClickItems(true);
-console.log(props.item);
+    props.setClickItems(props.item);
 
   }
-//   useEffect(() => {
-//     getItem();
-//  }, [])
-
   return( 
   <div className = 'item'>
     <h3>{props.item.title}</h3>
     <h3>{props.item.description}</h3>
     <h3>{props.item.price}</h3>
     <h3>{props.item.category}</h3>
-    <img onClick={getItem} 
+    <img 
+    onClick={getItem} 
     src={props.item.image} alt={props.item.name} />
   </div>
   )
