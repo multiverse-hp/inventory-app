@@ -7,21 +7,22 @@ import apiURL from '../api';
 
 export const App = () => {
 
-	const [sauces, setSauces] = useState([]);
+	// const [sauces, setSauces] = useState([]);
 	//intialized items state
 	const [items, setItems] = useState([])
+	const [clickItem, setClickItem] = useState([])
 
-	async function fetchSauces(){
-		try {
-			const response = await fetch(`${apiURL}/sauces`);
-			const saucesData = await response.json();
+	// async function fetchSauces(){
+	// 	try {
+	// 		const response = await fetch(`${apiURL}/sauces`);
+	// 		const saucesData = await response.json();
 			
-			console.log(saucesData);
-			setSauces(saucesData)
-		} catch (err) {
-			console.log("Oh no an error! ", err)
-		}
-	}
+	// 		console.log(saucesData);
+	// 		setSauces(saucesData)
+	// 	} catch (err) {
+	// 		console.log("Oh no an error! ", err)
+	// 	}
+	// }
 
 	//fetch items function
 	async function fetchItems(){
@@ -51,12 +52,11 @@ export const App = () => {
       {/* <h1>Sauce Store</h1>
 			<h2>All things 🔥</h2>
 			<SaucesList sauces={sauces} /> */}
-
 			<h1>Inventory</h1>
 			<h2>All items</h2>
 			{/* button to add item */}
 			<button>Add Item</button>
-			<ItemsList items={items} />
+			<ItemsList items={items} setItems={setItems} />
 		</main>
 	)
 }

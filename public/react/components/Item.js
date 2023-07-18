@@ -16,7 +16,7 @@ export const Item = (props) => {
     <h3>{props.item.price}</h3>
     <h3>{props.item.category}</h3>
     <img 
-    // onClick={getItem} 
+    onClick={getItem} 
     src={props.item.image} alt={props.item.name} />
   </div>
   )
