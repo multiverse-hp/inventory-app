@@ -4,9 +4,10 @@ const {sequelize} = require('../db')
 
 
 const Item = sequelize.define("items", {
+
     title: Sequelize.STRING,
-    price: Sequelize.FLOAT,
     description: Sequelize.STRING,
+    price: Sequelize.FLOAT,
     category: Sequelize.STRING,
     image: Sequelize.TEXT,
   });
