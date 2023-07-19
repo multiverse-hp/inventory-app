@@ -4,7 +4,7 @@ import apiURL from '../api';
 // import '../../../public/style.css'
 
 
-export const AddPage = (props) => {
+export const AddPage = () => {
 
   
   
@@ -22,7 +22,13 @@ export const AddPage = (props) => {
 
 
             <label>Category:</label>
-            <textarea rows='4' cols='50' placeholder='Enter category here...' required></textarea>
+            <select>
+                <option value="">Select Category...</option>
+                <option value="Men's Clothing">Men's Clothing</option>
+                <option value="Women's clothing">Women's clothing</option>
+                <option value="Jewelery">Jewelery</option>
+                <option value="Electronics">Electronics</option>
+            </select>
 
 
             <label>Price:</label>
