@@ -12,6 +12,7 @@ export const App = () => {
 	//intialized items state
 	const [items, setItems] = useState([])
     const [clickItems, setClickItems] = useState(null);
+	// const [ query, setQuery ] = useState('');
 
 //function for handling click on item card in home page
 	// async function fetchSauces(){
@@ -57,6 +58,10 @@ export const App = () => {
 			
 			{clickItems !== null ? <ItemDetails item={clickItems} setClickItems={setClickItems} setItems={setItems} items={items}/> : 
 			<div>
+				{/* <div>
+				<label>Search</label>
+				<input type="text" placeholder='search' onChange={(e)=>setQuery(e.target.value)} />
+				</div> */}
 			<h1>Inventory</h1>
 			<h2>All items</h2>
 
