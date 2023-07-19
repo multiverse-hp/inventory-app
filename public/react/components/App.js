@@ -62,9 +62,9 @@ export const App = () => {
 			<h2>All things 🔥</h2>
 			<SaucesList sauces={sauces} /> */}
 
-			{showAddPage ? (
+			{/* {showAddPage ? (
 				<AddPage setItems={setItems} setShowAddPage={setShowAddPage} items={items}/> ) : <button onClick={handleAddItemClick}>Add Item</button>
-			}
+			} */}
 			{clickItems !== null ? <ItemDetails item={clickItems} setClickItems={setClickItems} setItems={setItems} items={items}/> : 
 			<div>
 				{/* <div>
@@ -78,8 +78,10 @@ export const App = () => {
 			{/* button to add item */}
 
 			
-			<button>Add Item</button>
-			
+			{/* <button>Add Item</button> */}
+			{showAddPage ? (
+				<AddPage setItems={setItems} setShowAddPage={setShowAddPage} items={items}/> ) : <button onClick={handleAddItemClick}>Add Item</button>
+			}
 			</div>
 		
 
