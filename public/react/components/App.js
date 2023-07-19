@@ -44,7 +44,6 @@ export const App = () => {
 
 	const handleAddItemClick = () =>{
 		setShowAddPage(true);
-		<AddPage />
 	};
 
 	// useEffect(() => {
@@ -62,22 +61,18 @@ export const App = () => {
 			<h2>All things 🔥</h2>
 			<SaucesList sauces={sauces} /> */}
 
-			{showAddPage ? (
-				<AddPage setItems={setItems} setShowAddPage={setShowAddPage} items={items}/> ) : <button onClick={handleAddItemClick}>Add Item</button>
-			}
-			{clickItems !== null ? <ItemDetails item={clickItems} setClickItems={setClickItems} setItems={setItems} items={items}/> : 
+			{showAddPage ? ( 
+				<AddPage setItems={setItems} setShowAddPage={setShowAddPage} items={items}/> 
+				) : clickItems !== null ? (
+				<ItemDetails item={clickItems} setClickItems={setClickItems} setItems={setItems} items={items}/> 
+				) : (
 			<div>
-				{/* <div>
-				<label>Search</label>
-				<input type="text" placeholder='search' onChange={(e)=>setQuery(e.target.value)} />
-				</div> */}
 			<h1>Inventory</h1>
 			<h2>All items</h2>
-
-			{/* button to add item */}
-			{/* <button onClick={handleAddItemClick}>Add Item</button> */}
+			<button onClick={handleAddItemClick}>Add Item</button>
 			<ItemsList item={clickItems} setClickItems={setClickItems} setItems={setItems} items={items}/>
-			</div> }
+			</div> 
+			)}
 			
 		</main>
 	)
