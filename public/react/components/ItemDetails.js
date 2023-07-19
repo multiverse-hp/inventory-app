@@ -1,18 +1,17 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { useState, useEffect} from 'react';
 import apiURL from '../api';
 
 export const ItemDetails = (props) => {
 
   //delete item logic
-  let deleteItem = async(id) => {
-    let itemData = await fetch(`${apiURL}/wiki/${id}`, {
-      method: "DELETE",
-  });
-
-  let item = await itemData.json();
+  let deleteItem = async() => {
+   fetch(`${apiURL}/items/${props.item.id}`, {
+      method: "DELETE"
+  })
 
   props.setClickItems(null);
+  let id = props.item.id
   props.setItems(props.items.filter((item) => item.id !== id));
 }
 
@@ -29,7 +28,8 @@ export const ItemDetails = (props) => {
 
         <div className='idh3-btn-div'>
         <button onClick={() => props.setClickItems(null)}>Back to Inventory</button>
-        <button onClick={() => deleteItem(props.item.id)}>Delete Item</button>
+        <button onClick={deleteItem}>Delete Item</button>
+        <button>Edit item</button>
         </div>
         </> )
 }
