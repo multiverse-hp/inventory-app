@@ -1,6 +1,9 @@
 import React, { useState,useEffect } from 'react';
 import apiURL from '../api';
 
+// import '../../../public/style.css'
+
+
 export const Item = (props) => {
 
    function getItem(){
@@ -8,18 +11,24 @@ export const Item = (props) => {
     // let item = await itemData.json()
     // props.setClickItems(item);
     props.setClickItems(props.item);
-
+    console.log(props.item);
   }
+
   return( 
-  <div className = 'item'>
-    <h3>{props.item.title}</h3>
-    <h3>{props.item.description}</h3>
-    <h3>{props.item.price}</h3>
-    <h3>{props.item.category}</h3>
-    <img 
+    <>
+    <div className='div-flex-contain'>
+    <img className='item-images'
     onClick={getItem} 
     src={props.item.image} alt={props.item.name} />
-  </div>
+     <div className='descript-div'>
+      <h3>Title: {props.item.title}</h3>
+      <h3>Description: {props.item.description}</h3>
+      <h3>Price: {props.item.price}</h3>
+      <h3>Category: {props.item.category}</h3>
+      </div>
+      </div>
+    </>
+  
   )
 }
 
