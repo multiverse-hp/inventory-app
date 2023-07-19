@@ -20,11 +20,14 @@ export const ItemsList = ({ items, setClickItems }) => {
     <div className="main-container">
       {/* <h1>Inventory</h1> */}
       {/* <h2>All items</h2> */}
+      {/* <div className='page-container'> */}
       <div className="grid-container">
         {items.map((item, idx) => (
           <Item item={item} setClickItems={setClickItems} key={idx} />
         ))}
       </div>
+      {/* </div> */}
+      
     </div>
   );
 };

@@ -18,6 +18,8 @@
   display: grid;
   grid-template-columns: repeat(4,1fr);
   /* grid-template-rows: repeat(3, 1fr); */
+  justify-items: center;
+  margin-top: 40px;
 }
 
 /* .item1-div {
@@ -56,4 +58,34 @@
   flex-direction: column;
   width: fit-content;
   height: fit-content;
+}
+
+.idh3-div {
+  width: 300px;
+  height: fit-content;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.idh3-div h3 {
+  font-size: 16px;
+}
+
+.item img {
+  height: 250px;
+  width: 250px;
+}
+
+.idh3-btn-div {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.idh3-btn-div button {
+    background: #b4b4b4;
+    height: 50px;
+    border-radius: 20px;
+    border: 1px solid black;
 }
