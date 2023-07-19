@@ -4,11 +4,17 @@ import apiURL from '../api';
 // import '../../../public/style.css'
 
 
-export const AddPage = () => {
+export const AddPage = ({setItems, setShowAddPage}) => {
+    const [formData, setFormData] =useState({
+        title:'',
+        description: '',
+        category: "",
+        price : 0,
+    });
 
-  
-  
-
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+    }
   return( 
     <>
     <div>
@@ -43,4 +49,4 @@ export const AddPage = () => {
   )
 }
 
-module.exports = { Item }
+module.exports = { AddPage }
