@@ -62,19 +62,29 @@ export const App = () => {
 			<h2>All things 🔥</h2>
 			<SaucesList sauces={sauces} /> */}
 
-			{showAddPage ? (
+			{/* {showAddPage ? (
 				<AddPage setItems={setItems} setShowAddPage={setShowAddPage} items={items}/> ) : <button onClick={handleAddItemClick}>Add Item</button>
-			}
+			} */}
 			{clickItems !== null ? <ItemDetails item={clickItems} setClickItems={setClickItems} setItems={setItems} items={items}/> : 
 			<div>
 				{/* <div>
 				<label>Search</label>
 				<input type="text" placeholder='search' onChange={(e)=>setQuery(e.target.value)} />
 				</div> */}
+			<div className='title-div'>
 			<h1>Inventory</h1>
 			<h2>All items</h2>
 
 			{/* button to add item */}
+
+			
+			{/* <button>Add Item</button> */}
+			{showAddPage ? (
+				<AddPage setItems={setItems} setShowAddPage={setShowAddPage} items={items}/> ) : <button onClick={handleAddItemClick}>Add Item</button>
+			}
+			</div>
+		
+
 			{/* <button onClick={handleAddItemClick}>Add Item</button> */}
 			<ItemsList item={clickItems} setClickItems={setClickItems} setItems={setItems} items={items}/>
 			</div> }

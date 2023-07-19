@@ -13,6 +13,17 @@
   grid-template-columns: repeat(4,1fr);
   grid-template-rows: repeat(3, 1fr);
 } */
+.title-div {
+  display: flex;
+  justify-content: space-around;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  line-height: 1.5;
+}
 
 .grid-container {
   display: grid;
@@ -31,6 +42,8 @@
   height: 300px;
   width: 300px;
 } */
+
+
 .item-images {
   height: 220px;
   width: 220px;
