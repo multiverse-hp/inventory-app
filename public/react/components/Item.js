@@ -16,6 +16,7 @@ export const Item = (props) => {
 
   return( 
     <>
+    <div className='div-flex-contain'>
     <img className='item-images'
     onClick={getItem} 
     src={props.item.image} alt={props.item.name} />
@@ -24,6 +25,7 @@ export const Item = (props) => {
       <h3>Description: {props.item.description}</h3>
       <h3>Price: {props.item.price}</h3>
       <h3>Category: {props.item.category}</h3>
+      </div>
       </div>
     </>
   
