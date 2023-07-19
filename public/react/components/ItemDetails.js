@@ -18,14 +18,19 @@ export const ItemDetails = (props) => {
 
     return(<>
         <div className = 'item'>
-          <h3>{props.item.title}</h3>
-          <h3>{props.item.description}</h3>
-          <h3>{props.item.price}</h3>
-          <h3>{props.item.category}</h3>
-          <img src={props.item.image} alt={props.item.name} />
+        <img src={props.item.image} alt={props.item.name} />
+          <div className='idh3-div'>
+          <h3>Title: {props.item.title}</h3>
+          <h3>Description: {props.item.description}</h3>
+          <h3>Price: {props.item.price}</h3>
+          <h3>Category: {props.item.category}</h3>
+          </div>
         </div>
+
+        <div className='idh3-btn-div'>
         <button onClick={() => props.setClickItems(null)}>Back to Inventory</button>
         <button onClick={() => deleteItem(props.item.id)}>Delete Item</button>
+        </div>
         </> )
 }
 
