@@ -62,11 +62,17 @@ export const App = () => {
 				<label>Search</label>
 				<input type="text" placeholder='search' onChange={(e)=>setQuery(e.target.value)} />
 				</div> */}
+			<div className='title-div'>
 			<h1>Inventory</h1>
 			<h2>All items</h2>
 
 			{/* button to add item */}
+
+			
 			<button>Add Item</button>
+			</div>
+		
+
 			<ItemsList item={clickItems} setClickItems={setClickItems} setItems={setItems} items={items}/>
 			</div> }
 			
