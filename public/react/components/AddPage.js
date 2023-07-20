@@ -49,15 +49,16 @@ export const AddPage = ({setItems, setShowAddPage}) => {
       };
   return( 
     <>
-    <div>
-        <h1 className="text-center">Add Item</h1><br/>
+    <div className='addPage-container'>
+        <h1 className="text-center">Add Page</h1><br/>
         <form onSubmit={handleSubmit}>
+          <div className='user-box'>
             <label>Title:</label>
             <input type="text" id="title" name="title" onChange={handleChange} value={formData.title} required />
 
 
             <label>Description:</label>
-            <textarea rows='4' cols='50' 
+            <textarea id='addPage-textarea' rows='4' cols='50' 
             placeholder='Enter description here...' 
             onChange={handleChange}
             name="description"
@@ -92,10 +93,13 @@ export const AddPage = ({setItems, setShowAddPage}) => {
 
            
 
-            <button type='submit'>Save Changes</button>
-        <button type ="button" onClick ={handleBackToInventory}>Back to Inventory</button>
-       
-
+            <button type='submit'>
+            <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+              Save Changes</button>
+            </div>
         </form>
     </div>
     </>
