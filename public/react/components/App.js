@@ -52,7 +52,4 @@ export const App = () => {
 			
 		</main>
 	)
-}	
-
-  
-  
+}
