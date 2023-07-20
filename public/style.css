@@ -1,9 +1,10 @@
 * {
   margin: 0;
   box-sizing: border-box;
-  background-color: rgb(223, 223, 223);
+  /* background-color: rgb(223, 223, 223); */
 }
 
+body { background-color: rgb(223, 223, 223);}
 /* #root {
   display: flex;
 } */
@@ -13,11 +14,24 @@
   grid-template-columns: repeat(4,1fr);
   grid-template-rows: repeat(3, 1fr);
 } */
+.title-div {
+  display: flex;
+  justify-content: space-around;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  line-height: 1.5;
+}
 
 .grid-container {
   display: grid;
   grid-template-columns: repeat(4,1fr);
   /* grid-template-rows: repeat(3, 1fr); */
+  justify-items: center;
+  margin-top: 40px;
 }
 
 /* .item1-div {
@@ -29,9 +43,15 @@
   height: 300px;
   width: 300px;
 } */
+
+
 .item-images {
   height: 220px;
   width: 220px;
+}
+
+.item h3 {
+  font-size: 16px;
 }
 
 .descript-div {
@@ -56,4 +76,102 @@
   flex-direction: column;
   width: fit-content;
   height: fit-content;
+}
+
+.idh3-div {
+  width: 300px;
+  height: fit-content;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.idh3-div h3 {
+  font-size: 16px;
+}
+
+.item {
+  display: flex;
+  gap: 200px;
+  z-index: 99;
+}
+
+.form-div {
+  height: 300px;
+  width: 326px;
+  z-index: 100;
+  background-color: #eee;
+  border-radius: 5%;
+  position: absolute;
+  top: 4%;
+  left: 50%;
+  box-shadow: 5px 6px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.editModal {
+  /* gap: 13px; */
+  /* position: relative; */
+  /* top: 28%; */
+  /* left: 0%; */
+  /* width: fit-content; */
+  /* width: 301px; */
+  width: 301px;
+  gap: 13px;
+  position: relative;
+  top: 12%;
+}
+
+ .form-div h3 {
+  margin-top: 32px;
+  margin-bottom: -16px;
+  font-size: 25px;
+}
+
+.hidden {
+  display: none;
+}
+
+.item img {
+  height: 250px;
+  width: 250px;
+}
+
+.idh3-btn-div {
+   width: fit-content;
+   display: flex;
+   /* flex-direction: column; */
+   gap: 10px;
+   width: 80%;
+   justify-content: flex-end;
+   margin-top: 5%;
+   margin-left: 17%;
+}
+
+.idh3-btn-div button {
+    background: #b4b4b4;
+    height: 50px;
+    width: 100px;
+    border-radius: 20px;
+    border: 1px solid black;
+}
+
+.itemDetail-main-container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: fit-content;
+    margin: auto;
+    background-color: white;
+    margin-top: 5%;
+    padding: 15px;
+}
+
+.h3-clickItem-div {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  line-height: 1.5;
 }
