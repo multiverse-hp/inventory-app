@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import { useState, useEffect} from 'react';
 import apiURL from '../api';
-import ImageZoomEffect from './zoomImage';
+
 
 export const ItemDetails = (props) => {
   const [formData, setFormData] = useState({
