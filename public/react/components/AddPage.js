@@ -50,7 +50,7 @@ export const AddPage = ({setItems, setShowAddPage}) => {
   return( 
     <>
     <div className='addPage-container'>
-        <h1 className="text-center">Add Page</h1><br/>
+        <h1 className="text-center">Add Item</h1><br/>
         <form onSubmit={handleSubmit}>
           <div className='user-box'>
             <label>Title:</label>
