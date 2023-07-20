@@ -175,3 +175,14 @@ form {
   width: 400px;
   line-height: 1.5;
 }
+
+.cart{
+  display:flex;
+}
+.cart p{
+  left: 50px;
+  position: absolute;
+  background-color: gray;
+  border-radius: 50%;
+  color: white;
+}
