@@ -276,15 +276,21 @@ form {
 }
 
 .h3-clickItem-div {
-  /* display: flex;
+  display: flex;
   flex-direction: column;
   width: 400px;
-  line-height: 1.5; */
-    width: 400px;
-    flex-direction: column;
-    line-height: 1.5;
-    display: flex;
-    justify-content: space-around;
+  line-height: 1.5;
+}
+
+.cart{
+  display:flex;
+}
+.cart p{
+  left: 50px;
+  position: absolute;
+  background-color: gray;
+  border-radius: 50%;
+  color: white;
 }
 
 

@@ -1,5 +1,6 @@
 import React, { useState,useEffect } from 'react';
 import apiURL from '../api';
+import { items } from '../../../server/seedData';
 
 
 
@@ -9,6 +10,7 @@ export const Item = (props) => {
     props.setClickItems(props.item);
     console.log(props.item);
   }
+
 
   return( 
     <>

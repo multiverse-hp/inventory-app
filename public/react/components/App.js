@@ -11,7 +11,7 @@ export const App = () => {
 	//intialized items state
 	const [items, setItems] = useState([])
     const [clickItems, setClickItems] = useState(null);
-	const [ showAddPage, setShowAddPage ] = useState(false);
+	const [showAddPage, setShowAddPage ] = useState(false);
 
 
 	//fetch items function
@@ -47,7 +47,7 @@ export const App = () => {
 			<h2>All items</h2>
 			<button onClick={handleAddItemClick}>Add Item</button>
 			
-			<ItemsList item={clickItems} setClickItems={setClickItems} setItems={setItems} items={items}/>
+			<ItemsList item={clickItems} setClickItems={setClickItems} setItems={setItems} items={items} />
 			</div> )}
 			
 		</main>

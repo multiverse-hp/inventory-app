@@ -84,9 +84,9 @@ export const AddPage = ({setItems, setShowAddPage}) => {
             <label>Image URL:</label>
             <input
              type="url"
-            name="image_url"
+            name="image"
             onChange={handleChange}
-            value={formData.image_url}
+            value={formData.image}
             required
             placeholder="Enter image URL here..."
           ></input>
