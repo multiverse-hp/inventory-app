@@ -1,6 +1,7 @@
 import React, {useEffect} from 'react';
 import { useState, useEffect} from 'react';
 import apiURL from '../api';
+import ImageZoomEffect from './zoomImage';
 
 export const ItemDetails = (props) => {
   const [formData, setFormData] = useState({
@@ -58,17 +59,33 @@ export const ItemDetails = (props) => {
     console.log("Edit Button State: ", editButton)
   }
   
+
+  // testing something
+  
+
+  const handleImageZoom = (event) => {
+    const img = imgRef.current;
+    img.style.transform = 'scale(1.2)';
+    img.style.transformOrigin = `${event.nativeEvent.offsetX}px ${event.nativeEvent.offsetY}px`;
+  };
+
+  const handleImageUnzoom = () => {
+    const img = imgRef.current;
+    img.style.transform = 'scale(1)';
+    img.style.transformOrigin = 'center center';
+  };
+// end of testing something
   return (
     <>
     <div className='itemDetail-main-container'>
     <div className="item">
-        <img src={props.item.image} alt={props.item.name} />
+        <img className='item-images' src={props.item.image} alt={props.item.name} />
         <div className='h3-clickItem-div'>
           {/* put the h3 inside here */}
-        <h3>{props.item.title}</h3>
-        <h3>{props.item.description}</h3>
-        <h3>{props.item.price}</h3>
-        <h3>{props.item.category}</h3>
+        <h3>Title: {props.item.title}</h3>
+        <h3>Description: {props.item.description}</h3>
+        <h3>Price: {props.item.price}</h3>
+        <h3>Category: {props.item.category}</h3>
         </div>
       </div>
     {/* {editButton == null ?  */}
@@ -126,5 +143,6 @@ export const ItemDetails = (props) => {
       </form>
       </div>
         </>
+
   )
 }
