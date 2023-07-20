@@ -12,7 +12,7 @@ export const App = () => {
 	// const [sauces, setSauces] = useState([]);
 	//intialized items state
 	const [items, setItems] = useState([])
-    const [clickItems, setClickItems] = useState(null);
+    const [clickItems, setClickItems] = useState(null);   
 	// const [ query, setQuery ] = useState('');
 	const [ showAddPage, setShowAddPage ] = useState(false);
 
@@ -20,7 +20,7 @@ export const App = () => {
 	// async function fetchSauces(){
 	// 	try {
 	// 		const response = await fetch(`${apiURL}/sauces`);
-	// 		const saucesData = await response.json();
+	// 		const saucesData = await response.json();  
 			
 	// 		console.log(saucesData);
 	// 		setSauces(saucesData)
