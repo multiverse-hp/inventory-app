@@ -9,7 +9,7 @@ export const AddPage = ({setItems, setShowAddPage}) => {
         description: '',
         price : 0,
         category: "",
-        image_url:""
+        image:""
     });
 
     
@@ -49,8 +49,13 @@ export const AddPage = ({setItems, setShowAddPage}) => {
       };
   return( 
     <>
+<<<<<<< HEAD
   <div className='addPage-container'>
         <h1 className="text-center">Add page</h1><br/>
+=======
+    <div className='addPage-container'>
+        <h1 className="text-center">Add Item</h1><br/>
+>>>>>>> e926befc0a564ab5b87821c59339bd4f949c2b58
         <form onSubmit={handleSubmit}>
           <div className='user-box'>
             <label>Title:</label>
@@ -99,7 +104,11 @@ export const AddPage = ({setItems, setShowAddPage}) => {
       <span></span>
       <span></span>
               Save Changes</button>
+              
             </div>
+            <button type="button" onClick={handleBackToInventory}>
+            Back to Inventory
+          </button>
         </form>
     </div>
     </>
