@@ -1,12 +1,12 @@
 import React from 'react';
 import { Item } from './Item';
 
-export const ItemsList = ({ items, setClickItems, setItemsInCart, itemsInCart, setShowItemsInCart, showItemsInCart }) => {
+export const ItemsList = ({ items, setClickItems, }) => {
   return (
     <div className="main-container">
       <div className="grid-container">
         {items.map((item, idx) => (
-          <Item setShowItemsInCart={setShowItemsInCart} showItemsInCart={showItemsInCart} item={item} setClickItems={setClickItems} key={idx} setItemsInCart={setItemsInCart} itemsInCart={itemsInCart}/>
+          <Item item={item} setClickItems={setClickItems} key={idx}/>
         ))}
       </div>
       

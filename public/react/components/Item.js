@@ -11,11 +11,6 @@ export const Item = (props) => {
     console.log(props.item);
   }
 
-  function addToCart(){
-    props.setItemsInCart(props.itemsInCart+1)
-    props.setShowItemsInCart(props.showItemsInCart.push(props.item))
-    console.log(props.showItemsInCart)
-  }
 
   return( 
     <>
@@ -25,7 +20,6 @@ export const Item = (props) => {
     onClick={getItem} 
     src={props.item.image} alt={props.item.name} />
     </div>
-    <button onClick={addToCart}>Add to Cart</button>
      <div className='descript-div'>
       <h3>Title: {props.item.title}</h3>
       <h3>Description: {props.item.description}</h3>
