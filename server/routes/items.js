@@ -86,14 +86,14 @@ router.put('/:id', async (req,res, next)=> {
 //add item
 router.post('/item', async (req, res, next) => {
   try {
-    const { title, description, price, category, image_url } = req.body;
+    const { title, description, price, category, image } = req.body;
 
     const newItem = await Item.create({
       title,
       description,
       price,
       category,
-      image_url
+      image
     });
 
     res.status(201).json(newItem);

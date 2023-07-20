@@ -9,7 +9,7 @@ export const AddPage = ({setItems, setShowAddPage}) => {
         description: '',
         price : 0,
         category: "",
-        image_url:""
+        image:""
     });
 
     
@@ -99,7 +99,11 @@ export const AddPage = ({setItems, setShowAddPage}) => {
       <span></span>
       <span></span>
               Save Changes</button>
+              
             </div>
+            <button type="button" onClick={handleBackToInventory}>
+            Back to Inventory
+          </button>
         </form>
     </div>
     </>
