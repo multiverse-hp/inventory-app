@@ -12,6 +12,12 @@ export const AddPage = ({setItems, setShowAddPage}) => {
         image_url:""
     });
 
+    
+  const handleBackToInventory = () => {
+    // Set the setShowAddPage state to false to go back to the inventory page
+    setShowAddPage(false);
+  };
+
     const handleSubmit = async (event) => {
         event.preventDefault();
         try {
@@ -44,7 +50,7 @@ export const AddPage = ({setItems, setShowAddPage}) => {
   return( 
     <>
     <div>
-        <h1 className="text-center">Add Page</h1><br/>
+        <h1 className="text-center">Add Item</h1><br/>
         <form onSubmit={handleSubmit}>
             <label>Title:</label>
             <input type="text" id="title" name="title" onChange={handleChange} value={formData.title} required />
@@ -74,17 +80,21 @@ export const AddPage = ({setItems, setShowAddPage}) => {
             <label>Price:</label>
             <input type='number' min= "0" step=".01" name="price" onChange={handleChange} value={formData.price}></input>
 
-            <label>Image</label>
+            <label>Image URL:</label>
             <input
-            accept=".jpg,.jpeg,.png"
-            id="fileInput"
-            multiple
-            type="file"
-            style={{ display: "none"}}
-            />
+             type="url"
+            name="image_url"
+            onChange={handleChange}
+            value={formData.image_url}
+            required
+            placeholder="Enter image URL here..."
+          ></input>
 
+           
 
             <button type='submit'>Save Changes</button>
+        <button type ="button" onClick ={handleBackToInventory}>Back to Inventory</button>
+       
 
         </form>
     </div>
