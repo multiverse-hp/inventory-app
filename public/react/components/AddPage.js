@@ -35,7 +35,7 @@ export const AddPage = ({setItems, setShowAddPage}) => {
                 <option value="Jewelery">Jewelery</option>
                 <option value="Electronics">Electronics</option>
             </select>
-
+            
 
             <label>Price:</label>
             <input type='number' min= "0" step=".01"></input>
