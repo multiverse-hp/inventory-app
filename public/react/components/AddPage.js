@@ -7,14 +7,15 @@ export const AddPage = ({setItems, setShowAddPage}) => {
     const [formData, setFormData] =useState({
         title:'',
         description: '',
-        category: "",
         price : 0,
+        category: "",
+        image_url:""
     });
 
     const handleSubmit = async (event) => {
         event.preventDefault();
         try {
-            const response = await fetch(`${apiURL}/items`, {
+            const response = await fetch(`${apiURL}/items/item`, {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json',
@@ -72,6 +73,16 @@ export const AddPage = ({setItems, setShowAddPage}) => {
 
             <label>Price:</label>
             <input type='number' min= "0" step=".01" name="price" onChange={handleChange} value={formData.price}></input>
+
+            <label>Image</label>
+            <input
+            accept=".jpg,.jpeg,.png"
+            id="fileInput"
+            multiple
+            type="file"
+            style={{ display: "none"}}
+            />
+
 
             <button type='submit'>Save Changes</button>
 
