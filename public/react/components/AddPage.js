@@ -82,7 +82,7 @@ export const AddPage = ({setItems, setShowAddPage}) => {
 
             <label>Image URL:</label>
             <input
-             type="url"
+            //  type="url"
             name="image_url"
             onChange={handleChange}
             value={formData.image_url}
