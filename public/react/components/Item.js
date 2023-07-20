@@ -1,15 +1,11 @@
 import React, { useState,useEffect } from 'react';
 import apiURL from '../api';
 
-// import '../../../public/style.css'
 
 
 export const Item = (props) => {
 
    function getItem(){
-    // let itemData = await fetch(`${apiURL}/items/${props.item.id}`)
-    // let item = await itemData.json()
-    // props.setClickItems(item);
     props.setClickItems(props.item);
     console.log(props.item);
   }
