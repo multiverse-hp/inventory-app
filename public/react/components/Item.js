@@ -13,6 +13,8 @@ export const Item = (props) => {
 
   function addToCart(){
     props.setItemsInCart(props.itemsInCart+1)
+    props.setShowItemsInCart(props.showItemsInCart.push(props.item))
+    console.log(props.showItemsInCart)
   }
 
   return( 
