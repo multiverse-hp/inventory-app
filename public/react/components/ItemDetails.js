@@ -51,26 +51,42 @@ export const ItemDetails = (props) => {
       console.log('Error updating item:', error);
     }
   };
+
+  const handleEditClick = () => {
+    console.log("PRessed Edit Button")
+    editButton  == null ? setEditButton(true) : setEditButton(null) 
+    console.log("Edit Button State: ", editButton)
+  }
   
   return (
     <>
-    {editButton == null ? <div className="item">
+    <div className='itemDetail-main-container'>
+    <div className="item">
+        <img src={props.item.image} alt={props.item.name} />
+        <div className='h3-clickItem-div'>
+          {/* put the h3 inside here */}
         <h3>{props.item.title}</h3>
         <h3>{props.item.description}</h3>
         <h3>{props.item.price}</h3>
         <h3>{props.item.category}</h3>
-        <img src={props.item.image} alt={props.item.name} />
+        </div>
       </div>
-      :
+    {/* {editButton == null ?  */}
+    
+      
       <div>
-      <div className="item">
-        <h3>{props.item.title}</h3>
-        <h3>{props.item.description}</h3>
-        <h3>{props.item.price}</h3>
-        <h3>{props.item.category}</h3>
-        <img src={props.item.image} alt={props.item.name} />
       </div>
-      <form onSubmit={handleUpdate}>
+
+      <div className='idh3-btn-div'>
+        <button onClick={() => props.setClickItems(null)}>Back to Inventory</button>
+        <button onClick={deleteItem}>Delete Item</button>
+        <button onClick={() => editButton  == null ? setEditButton(true) : setEditButton(null)}>Edit item</button>
+        </div>
+        </div>
+        
+        <div onSubmit={handleUpdate} className={editButton ? 'form-div' : 'hidden'}>
+          <h3>Update form</h3>
+      <form onSubmit={handleUpdate} className={editButton ? 'editModal' : 'hidden'}>
         <input
           type="text"
           name="title"
@@ -109,12 +125,6 @@ export const ItemDetails = (props) => {
         <button type="submit">Update Item</button>
       </form>
       </div>
-}
-      <div className='idh3-btn-div'>
-        <button onClick={() => props.setClickItems(null)}>Back to Inventory</button>
-        <button onClick={deleteItem}>Delete Item</button>
-        <button onClick={()=> editButton == null ? setEditButton(true) : setEditButton(null)}>Edit item</button>
-        </div>
         </>
   )
 }
