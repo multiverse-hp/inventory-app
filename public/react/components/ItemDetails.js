@@ -83,6 +83,9 @@ export const ItemDetails = (props) => {
         <button onClick={() => editButton  == null ? setEditButton(true) : setEditButton(null)}>Edit item</button>
         </div>
         </div>
+        
+        <div onSubmit={handleUpdate} className={editButton ? 'form-div' : 'hidden'}>
+          <h3>Update form</h3>
       <form onSubmit={handleUpdate} className={editButton ? 'editModal' : 'hidden'}>
         <input
           type="text"
@@ -121,7 +124,7 @@ export const ItemDetails = (props) => {
         />
         <button type="submit">Update Item</button>
       </form>
-
+      </div>
         </>
   )
 }

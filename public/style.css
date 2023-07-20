@@ -95,8 +95,39 @@ form {
   z-index: 99;
 }
 
-.editModal {
+.form-div {
+  height: 300px;
+  width: 326px;
+  z-index: 100;
+  background-color: #eee;
+  border-radius: 5%;
+  position: absolute;
+  top: 4%;
+  left: 50%;
+  box-shadow: 5px 6px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
+
+.editModal {
+  /* gap: 13px; */
+  /* position: relative; */
+  /* top: 28%; */
+  /* left: 0%; */
+  /* width: fit-content; */
+  /* width: 301px; */
+  width: 301px;
+  gap: 13px;
+  position: relative;
+  top: 12%;
+}
+
+ .form-div h3 {
+  margin-top: 32px;
+  margin-bottom: -16px;
+  font-size: 25px;
 }
 
 .hidden {
