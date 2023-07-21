@@ -49,13 +49,8 @@ export const AddPage = ({setItems, setShowAddPage}) => {
       };
   return( 
     <>
-<<<<<<< HEAD
-  <div className='addPage-container'>
-        <h1 className="text-center">Add page</h1><br/>
-=======
     <div className='addPage-container'>
         <h1 className="text-center">Add Item</h1><br/>
->>>>>>> e926befc0a564ab5b87821c59339bd4f949c2b58
         <form onSubmit={handleSubmit}>
           <div className='user-box'>
             <label>Title:</label>
@@ -98,15 +93,32 @@ export const AddPage = ({setItems, setShowAddPage}) => {
 
            
 
-            <button type='submit'>
+            {/* <button type='submit'>
             <span></span>
       <span></span>
       <span></span>
       <span></span>
               Save Changes</button>
               
+              <button type="button" onClick={handleBackToInventory}>
+            Back to Inventory
+          </button> */}
             </div>
-            <button type="button" onClick={handleBackToInventory}>
+            {/* <button type="button" onClick={handleBackToInventory}>
+            Back to Inventory
+          </button> */}
+                 <button type='submit'>
+            <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+              Save Changes</button>
+              
+              <button type="button" onClick={handleBackToInventory}>
+              <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
             Back to Inventory
           </button>
         </form>

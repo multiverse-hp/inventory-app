@@ -95,7 +95,13 @@ export const ItemDetails = (props) => {
       </div>
 
       <div className='idh3-btn-div'>
-        <button onClick={() => props.setClickItems(null)}>Back to Inventory</button>
+        <button onClick={() => props.setClickItems(null)}>
+          {/* <span></span> */}
+          {/* <span></span> */}
+          {/* <span></span> */}
+          {/* <span></span> */}
+          Back to Inventory
+          </button>
         <button onClick={deleteItem}>Delete Item</button>
         <button onClick={() => editButton  == null ? setEditButton(true) : setEditButton(null)}>Edit item</button>
         </div>
@@ -139,7 +145,8 @@ export const ItemDetails = (props) => {
           value={formData.image}
           onChange={handleChange}
         />
-        <button type="submit">Update Item</button>
+        <button type="submit">
+          Update Item</button>
       </form>
       </div>
         </>

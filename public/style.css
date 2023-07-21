@@ -55,7 +55,7 @@ form {
   margin-top: 40px;
   gap: 15px;
   padding: 15px; */
-  grid-template-columns: repeat(4, 265px);
+    grid-template-columns: repeat(4, 265px);
     gap: 14px;
     margin-top: 40px;
     padding: 12px;
@@ -209,6 +209,7 @@ form {
 .item img {
   height: 300px;
   width: 300px;
+  border-radius: 3%;
 }
 
 .idh3-btn-div {
@@ -231,152 +232,27 @@ form {
    align-items: center;
 }
 
+/* buttons */
+
 .idh3-btn-div button {
   height: 50px;
   width: 240px;
   /* background: #b4b4b4; */
   /* background: #FFAA33; */
+  /* border: 1px solid #03e9f4; */
   border: 1px solid #000;
   border-radius: 2px;
 
-
-  /* test */
-  background: transparent;
-  color: var(--dark-color);
-  /* border: 2px solid var(--dark-color); */
-  border-width: 2px;
-  /* margin-right: 0.75rem; */
-}
-
-.idh3-btn-div button:hover {
-  transform: scale(1.05);
-  cursor: pointer;
-}
-
-.itemDetail-main-container {
-   display: flex;
-    flex-direction: column;
-    width: 75%;
-    height: fit-content;
-    margin: auto;
-    /* background-color: white; */
-    margin-top: 5%;
-    padding: 20px; 
-
-    /* width: 100%; */
-    /* max-width: 1140px; */
-    /* max-height: 640px; */
-    /* padding: 8rem 6rem; */
-    /* display: flex; */
-    /* align-items: center; */
-    background: rgba(255, 255, 255, 0.375);
-    box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
-    border-radius: 2rem;
-    border: 1px solid rgba(255, 255, 255, 0.125);
-}
-
-.h3-clickItem-div {
-  /* display: flex;
-  flex-direction: column;
-  width: 400px;
-  line-height: 1.5; */
-    width: 400px;
-    flex-direction: column;
-    line-height: 1.5;
-    display: flex;
-    justify-content: space-around;
-}
-
-
-
-
-#itemHover-div {
-  overflow: hidden;
-}
-
-#item-hoverImg {
-  transition: all 0.3s ease 0s;
-  width: 100%;
-}
-#item-hoverImg:hover {
-  transform: scale(1.25);
-}
-
-
-/* form code starts here for addpage */
-.addPage-container {
-  /* height: 410px;
-  width: 410px;
-  background-color: red;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; */
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 400px;
-  padding: 40px;
-  transform: translate(-50%, -50%);
-  background: rgba(0,0,0,.5);
-  box-sizing: border-box;
-  box-shadow: 0 15px 25px rgba(0,0,0,.6);
-  border-radius: 10px;
-}
-
-.user-box {
-
-}
-
-.addPage-container .user-box {
-  /* position: relative;
-  height: 370px; */
-  height: 370px;
-  position: relative;
-  gap: 10p;
-  display: flex;
-  flex-direction: column;
-  gap: 11px;
-  justify-content: space-around;
-}
-
-.addPage-container .user-box input{
-  /* position: relative; */
-  width: 100%;
-  /* padding: 10px 0; */
-  font-size: 16px;
-  color: #fff;
-  /* margin-bottom: 30px; */
-  border: none;
-  border-bottom: 1px solid #fff;
-  outline: none;
-  background: transparent;
-}
-
-.addPage-container .user-box label {
-  /* position: absolute; */
-  /* top:0; */
-  /* left: 0; */
-  /* padding: 10px 0; */
-  font-size: 16px;
-  color: #fff;
-  pointer-events: none;
-  transition: .5s;
-}
-.addPage-container .user-box input:focus ~ label,
-.addPage-container .user-box input:valid ~ label {
-  top: -20px;
-  left: 0;
-  color: #03e9f4;
-  font-size: 12px;
-}
-
-.addPage-container form button {
-  position: relative;
-  display: inline-block;
-  padding: 10px 20px;
   background-color: transparent;
-  color: #03e9f4;
+  /* color: #03e9f4; */
+  color: #000;
+  /* border: none; */
+  /* test */
+  /* background: transparent; */
+  /* color: var(--dark-color); */
+  /* border: 2px solid var(--dark-color); */
+  /* border-width: 2px; */
+  /* margin-right: 0.75rem; */
   font-size: 16px;
   text-decoration: none;
   text-transform: uppercase;
@@ -384,35 +260,51 @@ form {
   transition: .5s;
   margin-top: 4px;
   letter-spacing: 4px;
-  border: none;
+  /* border: none; */
 }
 
-.addPage-container button:hover {
+.idh3-btn-div button:hover {
+  /* transform: scale(1.05);
+  cursor: pointer;
   background: #03e9f4;
   color: #fff;
   border-radius: 5px;
-  box-shadow: 0 0 5px #03e9f4,
+  box-shadow: 0 0 5px #03e9f4, */
+              /* 0 0 15px #03e9f4, */
+              /* 0 0 25px #03e9f4, */
+              /* 0 0 50px #03e9f4; */
+               /* background: #03e9f4; */
+  /* background: #00000091; */
+  /* background: black; */
+  transform: scale(1.1);
+  background: #000000db;
+  color: #fff;
+  border-radius: 5px;
+  /* box-shadow: 0 0 5px #03e9f4,
               0 0 25px #03e9f4,
               0 0 50px #03e9f4,
-              0 0 100px #03e9f4;
+              0 0 100px #03e9f4; */
+    box-shadow: 0 0 5px #000000db,
+              0 0 25px #000000db,
+              0 0 50px #000000db,
+              0 0 100px #000000db,
 }
 
-/* code for spans in button */
-.addPage-container button span {
-  position: absolute;
+.idh3-btn-div button span {
+  position: relative;
   display: block;
 }
 
-.addPage-container button span:nth-child(1) {
+.idh3-btn-div button span:nth-child(1) {
   top: 0;
   left: -100%;
   width: 100%;
   height: 2px;
   background: linear-gradient(90deg, transparent, #03e9f4);
-  animation: btn-anim1 1s linear infinite;
+  animation: btn-anim2 1s linear infinite;
 }
 
-@keyframes btn-anim1 {
+@keyframes btn-anim2 {
   0% {
     left: -100%;
   }
@@ -421,7 +313,7 @@ form {
   }
 }
 
-.addPage-container button span:nth-child(2) {
+.idh3-btn-div button span:nth-child(2) {
   top: -100%;
   right: 0;
   width: 2px;
@@ -478,12 +370,361 @@ form {
   }
 }
 
+/* end of buttons */
+.itemDetail-main-container {
+   display: flex;
+    flex-direction: column;
+    width: 75%;
+    height: fit-content;
+    margin: auto;
+    /* background-color: rgba(197, 197, 197, 0.785); */
+    background-color: white;
+    margin-top: 5%;
+    padding: 20px; 
+
+    /* width: 100%; */
+    /* max-width: 1140px; */
+    /* max-height: 640px; */
+    /* padding: 8rem 6rem; */
+    /* display: flex; */
+    /* align-items: center; */
+    /* background: rgba(255, 255, 255, 0.375); */
+    box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
+    border-radius: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+.h3-clickItem-div {
+  /* display: flex;
+  flex-direction: column;
+  width: 400px;
+  line-height: 1.5; */
+    width: 400px;
+    flex-direction: column;
+    line-height: 1.5;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+
+#itemHover-div {
+  overflow: hidden;
+}
+
+#item-hoverImg {
+  transition: all 0.3s ease 0s;
+  width: 100%;
+}
+#item-hoverImg:hover {
+  transform: scale(1.25);
+}
+
+
+/* form code starts here for addpage */
+.addPage-container {
+  /* height: 410px;
+  width: 410px;
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 590px;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  /* background: rgba(0,0,0,.5); */
+  background: white;
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0,0,0,.6);
+  border-radius: 10px;
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user-box {
+
+}
+
+.addPage-container .user-box {
+  /* position: relative;
+  height: 370px; */
+  height: 370px;
+  position: relative;
+  gap: 10p;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}
+
+.addPage-container .user-box input{
+  /* position: relative; */
+  width: 100%;
+  /* padding: 10px 0; */
+  font-size: 16px;
+  /* color: #fff; */
+  color: black;
+  /* margin-bottom: 30px; */
+  border: none;
+  /* border-bottom: 1px solid #fff; */
+  border-bottom: 1px solid black;
+  outline: none;
+  background: transparent;
+}
+
+.addPage-container .user-box input::placeholder {
+  color: black;
+  opacity: 0.3;
+}
+
+.addPage-container .user-box label {
+  /* position: absolute; */
+  /* top:0; */
+  /* left: 0; */
+  /* padding: 10px 0; */
+  font-size: 16px;
+  /* color: #fff; */
+  color: black;
+  pointer-events: none;
+  transition: .5s;
+}
+.addPage-container .user-box input:focus ~ label,
+.addPage-container .user-box input:valid ~ label {
+  top: -20px;
+  left: 0;
+  /* color: #03e9f4; */
+  color: black;
+  /* font-size: 12px; */
+  font-size: 15px;
+}
+
+.addPage-container form button {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  /* background-color: transparent; */
+  background-color: #ededed;
+  /* color: #03e9f4; */
+  color: black;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .5s;
+  margin-top: 4px;
+  letter-spacing: 4px;
+  border: none;
+  margin-bottom: 10px;
+}
+
+.addPage-container button:hover {
+  /* background: #03e9f4; */
+  /* background: #00000091; */
+  /* background: black; */
+  background: #000000db;
+  color: #fff;
+  border-radius: 5px;
+  /* box-shadow: 0 0 5px #03e9f4,
+              0 0 25px #03e9f4,
+              0 0 50px #03e9f4,
+              0 0 100px #03e9f4; */
+    box-shadow: 0 0 5px #000000db,
+              0 0 25px #000000db,
+              0 0 50px #000000db,
+              0 0 100px #000000db,
+}
+
+/* code for spans in button */
+.addPage-container button span {
+  position: absolute;
+  display: block;
+}
+
+.addPage-container button span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  /* background: linear-gradient(90deg, transparent, #03e9f4); */
+  background: linear-gradient(90deg, transparent, black);
+  animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+  50%,100% {
+    left: 100%;
+  }
+}
+
+.addPage-container button span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  /* background: linear-gradient(180deg, transparent, #03e9f4); */
+  background: linear-gradient(90deg, transparent, black);
+  animation: btn-anim2 1s linear infinite;
+  animation-delay: .25s
+}
+
+@keyframes btn-anim2 {
+  0% {
+    top: -100%;
+  }
+  50%,100% {
+    top: 100%;
+  }
+}
+
+.addPage-container button span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  /* background: linear-gradient(270deg, transparent, #03e9f4); */
+  background: linear-gradient(90deg, transparent, black);
+  animation: btn-anim3 1s linear infinite;
+  animation-delay: .5s
+}
+
+@keyframes btn-anim3 {
+  0% {
+    right: -100%;
+  }
+  50%,100% {
+    right: 100%;
+  }
+}
+
+.addPage-container button span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  /* background: linear-gradient(360deg, transparent, #03e9f4); */
+  background: linear-gradient(90deg, transparent, black);
+  animation: btn-anim4 1s linear infinite;
+  animation-delay: .75s
+}
+
+@keyframes btn-anim4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,100% {
+    bottom: 100%;
+  }
+}
+
+
+
+
+/* copy test */
+
+.addPage-container button span:nth-child(5) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  /* background: linear-gradient(90deg, transparent, #03e9f4); */
+  background: linear-gradient(90deg, transparent, black);
+  animation: btn-anim1 1s linear infinite;
+  animation-delay: .25;
+}
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+  50%,100% {
+    left: 100%;
+  }
+}
+
+.addPage-container button span:nth-child(6) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  /* background: linear-gradient(180deg, transparent, #03e9f4); */
+  background: linear-gradient(90deg, transparent, black);
+  animation: btn-anim2 1s linear infinite;
+  animation-delay: .50s
+}
+
+@keyframes btn-anim2 {
+  0% {
+    top: -100%;
+  }
+  50%,100% {
+    top: 100%;
+  }
+}
+
+.addPage-container button span:nth-child(7) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  /* background: linear-gradient(270deg, transparent, #03e9f4); */
+  background: linear-gradient(90deg, transparent, black);
+  animation: btn-anim3 1s linear infinite;
+  animation-delay: .7s
+}
+
+@keyframes btn-anim3 {
+  0% {
+    right: -100%;
+  }
+  50%,100% {
+    right: 100%;
+  }
+}
+
+.addPage-container button span:nth-child(8) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  /* background: linear-gradient(360deg, transparent, #03e9f4); */
+  background: linear-gradient(90deg, transparent, black);
+  animation: btn-anim4 1s linear infinite;
+  animation-delay: .75s
+}
+
+@keyframes btn-anim4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,100% {
+    bottom: 100%;
+  }
+}
+/* end of copy test */
+
+
+
+
 #addPage-textarea {
   background-color: transparent;
 }
 
 #addPage-textarea::placeholder {
-  color: white;
+  /* color: white; */
+  color: black;
+  opacity: 0.3;
+  /* opacity: 1; */
 }
 
 /* #title {
