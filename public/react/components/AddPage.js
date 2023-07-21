@@ -90,23 +90,7 @@ export const AddPage = ({setItems, setShowAddPage}) => {
             required
             placeholder="Enter image URL here..."
           ></input>
-
-           
-
-            {/* <button type='submit'>
-            <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-              Save Changes</button>
-              
-              <button type="button" onClick={handleBackToInventory}>
-            Back to Inventory
-          </button> */}
             </div>
-            {/* <button type="button" onClick={handleBackToInventory}>
-            Back to Inventory
-          </button> */}
                  <button type='submit'>
             <span></span>
       <span></span>
