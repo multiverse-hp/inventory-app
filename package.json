@@ -8,9 +8,13 @@
     "seed": "node server/seed.js",
     "start": "parcel build public/index.html && npm run seed && node server.js"
   },
+  "jest": {
+    "testEnvironment": "jest-environment-jsdom"
+  },
   "dependencies": {
     "@babel/preset-env": "^7.15.0",
     "@babel/preset-react": "^7.14.5",
+    "@babel/runtime": "^7.22.6",
     "cors": "^2.8.5",
     "dotenv": "16.0.0",
     "express": "^4.17.1",
@@ -20,11 +24,13 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-test-renderer": "^18.2.0",
+    "regenerator-runtime": "^0.13.11",
     "sequelize": "^6.23.2",
     "sqlite3": "^5.1.1"
   },
   "devDependencies": {
-    "@testing-library/react": "^12.0.0",
+    "@babel/plugin-transform-runtime": "^7.22.9",
+    "@testing-library/react": "^14.0.0",
     "babel-jest": "^27.1.0",
     "jest": "^27.1.0",
     "process": "^0.11.10"
