@@ -30,6 +30,7 @@ export const App = () => {
 	const handleAddItemClick = () =>{
 		setShowAddPage(true);
 	};
+	// useEffect is used to intitially load the fetch items when page is loaded one time.
 	useEffect(() => {
 		fetchItems();
 	 }, [])
@@ -43,11 +44,14 @@ export const App = () => {
 				<ItemDetails item={clickItems} setClickItems={setClickItems} setItems={setItems} items={items}/> 
 				) : (
 			<div>
+				<div className='appPage-head-div'>
 			<h1>Inventory</h1>
-			<h2>All items</h2>
+			{/* <h2>All items</h2> */}
 			<button onClick={handleAddItemClick}>Add Item</button>
-			
-			<ItemsList item={clickItems} setClickItems={setClickItems} setItems={setItems} items={items} />
+
+			</div>
+			<ItemsList item={clickItems} setClickItems={setClickItems} setItems={setItems} items={items}/>
+
 			</div> )}
 			
 		</main>
