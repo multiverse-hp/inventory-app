@@ -44,7 +44,6 @@ export const App = () => {
 				) : (
 			<div>
 			<h1>Inventory</h1>
-			<h2>All items</h2>
 			<button onClick={handleAddItemClick}>Add Item</button>
 			
 			<ItemsList item={clickItems} setClickItems={setClickItems} setItems={setItems} items={items}/>
