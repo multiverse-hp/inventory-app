@@ -59,22 +59,6 @@ export const ItemDetails = (props) => {
     console.log("Edit Button State: ", editButton)
   }
   
-
-  // testing something
-  
-
-  const handleImageZoom = (event) => {
-    const img = imgRef.current;
-    img.style.transform = 'scale(1.2)';
-    img.style.transformOrigin = `${event.nativeEvent.offsetX}px ${event.nativeEvent.offsetY}px`;
-  };
-
-  const handleImageUnzoom = () => {
-    const img = imgRef.current;
-    img.style.transform = 'scale(1)';
-    img.style.transformOrigin = 'center center';
-  };
-// end of testing something
   return (
     <>
     <div className='itemDetail-main-container'>
@@ -88,14 +72,13 @@ export const ItemDetails = (props) => {
         <h3>Category: {props.item.category}</h3>
         </div>
       </div>
-    {/* {editButton == null ?  */}
-    
-      
       <div>
       </div>
 
       <div className='idh3-btn-div'>
-        <button onClick={() => props.setClickItems(null)}>Back to Inventory</button>
+        <button onClick={() => props.setClickItems(null)}>
+          Back to Inventory
+          </button>
         <button onClick={deleteItem}>Delete Item</button>
         <button onClick={() => editButton  == null ? setEditButton(true) : setEditButton(null)}>Edit item</button>
         </div>
@@ -139,7 +122,8 @@ export const ItemDetails = (props) => {
           value={formData.image}
           onChange={handleChange}
         />
-        <button type="submit">Update Item</button>
+        <button type="submit">
+          Update Item</button>
       </form>
       </div>
         </>
